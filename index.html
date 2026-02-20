@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Celebration | Rita</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         BACKGROUND ELEMENTS
+         ========================================== -->
+
+    <!-- Large Red Star (Bottom Right) -->
+    <!-- Positioned using bottom-0 right-0 and translate to peek out from the corner -->
+    <svg class="big-red-star opacity-80 w-[400px] h-[400px] bottom-[-100px] right-[-100px]" viewBox="0 0 100 100">
+        <path d="M50 0L61 35H98L68 57L79 91L50 70L21 91L32 57L2 35H39L50 0Z" fill="#b93232" />
+    </svg>
+
+    <!-- Checkerboard Star (Top Left) -->
+    <svg class="checker-star top-10 left-10 w-40 h-40 opacity-30" viewBox="0 0 100 100">
+        <defs>
+            <pattern id="checkers" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                <rect width="5" height="5" fill="#e8dcc4"/><rect x="5" y="5" width="5" height="5" fill="#e8dcc4"/>
+                <rect x="5" y="0" width="5" height="5" fill="#1a1512"/><rect x="0" y="5" width="5" height="5" fill="#1a1512"/>
+            </pattern>
+        </defs>
+        <path d="M50 0L61 35H98L68 57L79 91L50 70L21 91L32 57L2 35H39L50 0Z" fill="url(#checkers)" />
+    </svg>
+
+    <!-- ==========================================
+         MAIN CARD CONTENT
+         ========================================== -->
+    <div class="celebration-card">
+        <!-- The Realistic Cake -->
+        <div class="cake-realistic">
+            <div class="cake-layer layer-1"></div> <!-- Yellow Bottom -->
+            <div class="cake-layer layer-2"></div> <!-- Purple Middle -->
+            <div class="cake-layer layer-3"></div> <!-- Pink Top -->
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+        </div>
+
+        <h1 class="celebrate-text">
+            Happy birthday<br>Rita!
+        </h1>
+
+        <button class="btn-main" onclick="openScroll()">
+            press to see memories
+        </button>
+    </div>
+
+    <!-- ==========================================
+         POP-UP SCROLL (PHOTO GALLERY)
+         ========================================== -->
+    <div id="scroll-overlay" onclick="closeScroll()">
+        <div class="scroll-content" onclick="event.stopPropagation()">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-black text-gray-800 uppercase tracking-tighter">Memories</h2>
+                <div class="h-1 w-20 bg-red-600 mx-auto mt-2"></div>
+            </div>
+            
+            <!-- 
+                 PHOTO SECTION: 
+                 To add a real image, replace <span>[...]</span> 
+                 with <img src="your-image-url.jpg" alt="Description"> 
+            -->
+            
+            <div class="photo-placeholder" style="--r: -2deg">
+                <img src="rita1.jfif" alt="rita">
+                <!-- <img src="path_to_image.jpg" alt="Childhood"> -->
+            </div>
+
+            <div class="photo-placeholder" style="--r: 1deg">
+                <img src="rita3.jfif" alt="rita">
+            </div>
+
+            <div class="photo-placeholder" style="--r: -1.5deg">
+                <img src="rita4.jfif" alt="rita">
+            </div>
+
+            <div class="photo-placeholder" style="--r: -2deg">
+                <img src="rita6.jfif" alt="rita">
+            </div>
+
+            <div class="photo-placeholder" style="--r: 1deg">
+                <img src="rita7.jfif" alt="rita">
+            </div>
+
+            <div class="photo-placeholder" style="--r: -1.5deg">
+                <img src="rita2.jfif" alt="rita">
+            </div>
+
+            <div class="photo-placeholder" style="--r: -2deg">
+                <img src="rita5.jfif" alt="rita">
+            </div>
+
+            <div class="photo-placeholder" style="--r: 1deg">
+                <img src="rita8.jfif" alt="rita">
+            </div>
+
+            <div class="photo-placeholder" style="--r: -1.5deg">
+                <img src="rita9.jfif" alt="rita">
+            </div>
+
+            <div class="photo-placeholder" style="--r: -2deg">
+                <img src="rita10.jfif" alt="rita">
+            </div>
+
+            <div class="photo-placeholder" style="--r: 1deg">
+                <img src="rita11.jfif" alt="rita">
+            </div>
+
+            <div class="photo-placeholder" style="--r: -1.5deg">
+                <img src="rita12.jfif" alt="rita">
+            </div>
+
+            <div class="photo-placeholder" style="--r: 2deg">
+                <img src="rita13.jfif" alt="rita">
+            </div>
+
+            <div class="photo-placeholder" style="--r: -1deg">
+                <img src="rita14.jfif" alt="rita">
+            </div>
+
+            <div class="text-center mt-8 pb-10">
+                <p class="text-gray-600 font-serif italic mb-6">May your year be filled with as much joy as these memories na isus rita.</p>
+                <button class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-red-600 transition" onclick="closeScroll()">Return to Party</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACTIONS (JAVASCRIPT) -->
+    <script src="script.js"></script>
+</body>
+</html>
